@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="corner_radius_card_view">8dp</dimen>
+    <dimen name="elevation_card_view">4dp</dimen>
+    <dimen name="default_padding">8dp</dimen>
+    <dimen name="name_text_size">32sp</dimen>
+    <dimen name="surname_text_size">30sp</dimen>
+    <dimen name="phone_text_size">24sp</dimen>
+</resources>
