@@ -11,7 +11,7 @@ private const val ARG_PARAM1 = "param1"
 
 class DetailsFragment : Fragment() {
 
-    private lateinit var binding : FragmentDetailsBinding
+    private lateinit var binding: FragmentDetailsBinding
     private var contact: Contact? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,9 +31,26 @@ class DetailsFragment : Fragment() {
             etName.setText(contact?.name)
             etSurname.setText(contact?.surname)
             etPhone.setText(contact?.phone)
+
+            btnCancel.setOnClickListener { onCancelPressed() }
+            btnSave.setOnClickListener { onConfirmPressed() }
         }
 
         return binding.root
+    }
+
+    private fun onConfirmPressed() {
+        val result = contact?.copy(
+            name = binding.etName.text.toString(),
+            surname = binding.etSurname.text.toString(),
+            phone = binding.etPhone.text.toString()
+        )
+        navigator().publishResult(result = result!!)
+        navigator().goBack()
+    }
+
+    private fun onCancelPressed() {
+        navigator().goBack()
     }
 
     companion object {
