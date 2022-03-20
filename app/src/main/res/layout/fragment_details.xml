@@ -5,15 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
+    android:padding="@dimen/default_double_padding"
     tools:context=".DetailsFragment">
 
     <EditText
         android:id="@+id/et_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"
-        android:textSize="32sp"
+        android:hint="@string/text_name_field"
+        android:textSize="@dimen/text_size_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,10 +22,10 @@
         android:id="@+id/et_surname"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Surname"
-        android:textSize="32sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:hint="@string/text_surname_field"
+        android:textSize="@dimen/text_size_details"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_name" />
@@ -34,8 +34,8 @@
         android:id="@+id/et_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Phone"
-        android:textSize="32sp"
+        android:hint="@string/text_phone_field"
+        android:textSize="@dimen/text_size_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_surname" />
@@ -44,7 +44,7 @@
         android:id="@+id/btn_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="cancel"
+        android:text="@string/text_cancel_btn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btn_save"/>
@@ -53,7 +53,7 @@
         android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="save"
+        android:text="@string/text_save_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/btn_cancel"/>

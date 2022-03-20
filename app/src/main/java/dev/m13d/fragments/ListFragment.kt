@@ -5,6 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.core.view.forEach
+import androidx.core.view.forEachIndexed
+import androidx.core.view.get
 import androidx.fragment.app.Fragment
 import dev.m13d.fragments.Contacts.contacts
 import dev.m13d.fragments.databinding.FragmentListBinding
@@ -18,7 +24,8 @@ class ListFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        cardViewClickListener = context as CardViewClickListener
+        cardViewClickListener = context as? CardViewClickListener
+            ?: throw Exception("It's not implement CardViewClickListener")
     }
 
     override fun onCreateView(
@@ -45,39 +52,18 @@ class ListFragment : Fragment() {
     }
 
     private fun showContacts(conts: MutableList<Contact>?) {
-        with(binding) {
 
-            with(item1) {
-                setOnClickListener {
-                    cardViewClickListener.onCardViewClicked(conts?.get(0) ?: contacts[0])
+        (binding.linearLayout).forEachIndexed { index, card ->
+            (card as CardView).forEach card@ { linear ->
+                card.setOnClickListener {
+                    cardViewClickListener.onCardViewClicked(conts?.get(index) ?: contacts[index])
                 }
-                tvName1.text = conts?.get(0)?.name ?: contacts[0].name
-                tvSurname1.text = conts?.get(0)?.surname ?: contacts[0].surname
-                tvPhone1.text = conts?.get(0)?.phone ?: contacts[0].phone
-            }
-            with(item2) {
-                setOnClickListener {
-                    cardViewClickListener.onCardViewClicked(conts?.get(1) ?: contacts[1])
+                (linear as LinearLayout).forEach {
+                    (linear[0] as TextView).text = conts?.get(index)?.name ?: contacts[index].name
+                    (linear[1] as TextView).text = conts?.get(index)?.surname ?: contacts[index].surname
+                    (linear[2] as TextView).text = conts?.get(index)?.phone ?: contacts[index].phone
+                    return@card
                 }
-                tvName2.text = conts?.get(1)?.name ?: contacts[1].name
-                tvSurname2.text = conts?.get(1)?.surname ?: contacts[1].surname
-                tvPhone2.text = conts?.get(1)?.phone ?: contacts[1].phone
-            }
-            with(item3) {
-                setOnClickListener {
-                    cardViewClickListener.onCardViewClicked(conts?.get(2) ?: contacts[2])
-                }
-                tvName3.text = conts?.get(2)?.name ?: contacts[2].name
-                tvSurname3.text = conts?.get(2)?.surname ?: contacts[2].surname
-                tvPhone3.text = conts?.get(2)?.phone ?: contacts[2].phone
-            }
-            with(item4) {
-                setOnClickListener {
-                    cardViewClickListener.onCardViewClicked(conts?.get(3) ?: contacts[3])
-                }
-                tvName4.text = conts?.get(3)?.name ?: contacts[3].name
-                tvSurname4.text = conts?.get(3)?.surname ?: contacts[3].surname
-                tvPhone4.text = conts?.get(3)?.phone ?: contacts[3].phone
             }
         }
     }

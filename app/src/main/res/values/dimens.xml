@@ -7,4 +7,9 @@
     <dimen name="name_text_size">32sp</dimen>
     <dimen name="surname_text_size">30sp</dimen>
     <dimen name="phone_text_size">24sp</dimen>
+    <dimen name="text_size_details">32sp</dimen>
+    <dimen name="default_double_padding">16dp</dimen>
+    <dimen name="text_size_list">24sp</dimen>
+    <dimen name="cardview_bottom_margin">6dp</dimen>
+    <dimen name="ll_margin">4dp</dimen>
 </resources>

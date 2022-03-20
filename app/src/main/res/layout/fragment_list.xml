@@ -11,173 +11,159 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linear_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_margin="@dimen/default_margin"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/item1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                android:backgroundTint="#DDD"
-                android:elevation="4dp"
-                app:cardCornerRadius="8dp">
+                android:layout_marginBottom="@dimen/cardview_bottom_margin"
+                android:backgroundTint="@color/default_cardview_background"
+                android:elevation="@dimen/elevation_card_view"
+                app:cardCornerRadius="@dimen/corner_radius_card_view">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/ll_margin"
+                    android:layout_marginBottom="@dimen/ll_margin"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tv_name1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:textSize="24sp" />
+                        android:text="@string/text_name_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_surname1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Surname"
-                        android:textSize="24sp" />
+                        android:text="@string/text_surname_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_phone1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone"
-                        android:textSize="24sp" />
+                        android:text="@string/text_phone_field"
+                        android:textSize="@dimen/text_size_list" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/item2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                android:backgroundTint="#DDD"
-                android:elevation="4dp"
-                app:cardCornerRadius="8dp">
+                android:layout_marginBottom="@dimen/cardview_bottom_margin"
+                android:backgroundTint="@color/default_cardview_background"
+                android:elevation="@dimen/elevation_card_view"
+                app:cardCornerRadius="@dimen/corner_radius_card_view">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/ll_margin"
+                    android:layout_marginBottom="@dimen/ll_margin"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tv_name2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:textSize="24sp" />
+                        android:text="@string/text_name_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_surname2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Surname"
-                        android:textSize="24sp" />
+                        android:text="@string/text_surname_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_phone2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone"
-                        android:textSize="24sp" />
+                        android:text="@string/text_phone_field"
+                        android:textSize="@dimen/text_size_list" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/item3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="6dp"
-                android:backgroundTint="#DDD"
-                android:elevation="4dp"
-                app:cardCornerRadius="8dp">
+                android:layout_marginBottom="@dimen/cardview_bottom_margin"
+                android:backgroundTint="@color/default_cardview_background"
+                android:elevation="@dimen/elevation_card_view"
+                app:cardCornerRadius="@dimen/corner_radius_card_view">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/ll_margin"
+                    android:layout_marginBottom="@dimen/ll_margin"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tv_name3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:textSize="24sp" />
+                        android:text="@string/text_name_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_surname3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Surname"
-                        android:textSize="24sp" />
+                        android:text="@string/text_surname_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_phone3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone"
-                        android:textSize="24sp" />
+                        android:text="@string/text_phone_field"
+                        android:textSize="@dimen/text_size_list" />
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/item4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#DDD"
-                android:elevation="4dp"
-                app:cardCornerRadius="8dp">
+                android:backgroundTint="@color/default_cardview_background"
+                android:elevation="@dimen/elevation_card_view"
+                android:layout_marginBottom="@dimen/cardview_bottom_margin"
+                app:cardCornerRadius="@dimen/corner_radius_card_view">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="4dp"
+                    android:layout_marginStart="@dimen/default_margin"
+                    android:layout_marginTop="@dimen/ll_margin"
+                    android:layout_marginBottom="@dimen/ll_margin"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tv_name4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Name"
-                        android:textSize="24sp" />
+                        android:text="@string/text_name_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_surname4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Surname"
-                        android:textSize="24sp" />
+                        android:text="@string/text_surname_field"
+                        android:textSize="@dimen/text_size_list" />
 
                     <TextView
-                        android:id="@+id/tv_phone4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone"
-                        android:textSize="24sp" />
+                        android:text="@string/text_phone_field"
+                        android:textSize="@dimen/text_size_list" />
 
                 </LinearLayout>
 
