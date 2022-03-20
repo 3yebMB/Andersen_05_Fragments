@@ -12,12 +12,12 @@ private const val ARG_PARAM1 = "param1"
 class DetailsFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailsBinding
-    private var contact: Contact? = null
+    private lateinit var contact: Contact
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            contact = it.getParcelable(ARG_PARAM1)
+            contact = it.getParcelable(ARG_PARAM1) ?: throw Exception("Contact not found")
         }
     }
 
@@ -28,9 +28,9 @@ class DetailsFragment : Fragment() {
         binding = FragmentDetailsBinding.inflate(inflater, container, false)
 
         with(binding) {
-            etName.setText(contact?.name)
-            etSurname.setText(contact?.surname)
-            etPhone.setText(contact?.phone)
+            etName.setText(contact.name)
+            etSurname.setText(contact.surname)
+            etPhone.setText(contact.phone)
 
             btnCancel.setOnClickListener { onCancelPressed() }
             btnSave.setOnClickListener { onConfirmPressed() }
@@ -40,12 +40,12 @@ class DetailsFragment : Fragment() {
     }
 
     private fun onConfirmPressed() {
-        val result = contact?.copy(
-            name = binding.etName.text.toString(),
-            surname = binding.etSurname.text.toString(),
-            phone = binding.etPhone.text.toString()
+        val result = contact.copy(
+            name = if (binding.etName.text.isNotEmpty()) binding.etName.text.toString() else return,
+            surname = if (binding.etSurname.text.isNotEmpty()) binding.etSurname.text.toString() else return,
+            phone = if (binding.etPhone.text.isNotEmpty()) binding.etPhone.text.toString() else return
         )
-        navigator().publishResult(result = result!!)
+        navigator().publishResult(result = result)
         navigator().goBack()
     }
 

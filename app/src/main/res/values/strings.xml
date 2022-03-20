@@ -2,4 +2,9 @@
     <string name="app_name">Fragments</string>
     <string name="hello_fragment_list">Hello from list fragment</string>
     <string name="hello_fragment_details">Hello from details fragment</string>
+    <string name="text_name_field">Name</string>
+    <string name="text_surname_field">Surname</string>
+    <string name="text_phone_field">Phone</string>
+    <string name="text_cancel_btn">cancel</string>
+    <string name="text_save_btn">save</string>
 </resources>
